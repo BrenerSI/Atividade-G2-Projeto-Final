@@ -1,5 +1,7 @@
 # Dashboard Analítico de Chuvas e Deslizamentos no Estado do Rio de Janeiro
 
+Este projeto foi desenvolvido pelos alunos: Brener Baiense e Victor Hugo Peres.
+
 ## 1. Descrição do projeto
 
 Este projeto apresenta uma análise analítica e visual sobre eventos de chuvas intensas e deslizamentos de terra no Estado do Rio de Janeiro, com foco em vulnerabilidade climática, sazonalidade, regiões críticas e impactos sociais.
