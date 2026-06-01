@@ -40,7 +40,15 @@ st.title("Chuvas e Deslizamentos no Estado do Rio de Janeiro")
 st.write("""
 Este dashboard apresenta análises climáticas e de deslizamentos no Estado do Rio de Janeiro.
 """)
-
+st.write("""
+Projeto desenvolvido pelos estudantes Brener Baiense e Victor Hugo Peres.
+""")
+st.write("""
+Professor: Alexandre Neves Louzada.
+""")
+st.write("""
+Disciplina: Linguagens de Programação.
+""")
 # ---------------- SIDEBAR (FILTROS) ----------------
 st.sidebar.header("Filtros")
 
