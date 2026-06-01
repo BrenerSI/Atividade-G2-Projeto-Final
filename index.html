@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuvas e Deslizamentos no Rio de Janeiro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+            line-height: 1.7;
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+        }
+
+        .hero {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            background: #7dd3fc;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #38bdf8;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.3s;
+            border: 1px solid #334155;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .stat-box {
+            background: #1e293b;
+            padding: 35px;
+            border-radius: 18px;
+            text-align: center;
+            border: 1px solid #334155;
+        }
+
+        .stat-box h3 {
+            font-size: 2.5rem;
+            color: #38bdf8;
+        }
+
+        .stat-box p {
+            margin-top: 10px;
+            color: #cbd5e1;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .about p {
+            color: #cbd5e1;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 30px;
+            color: #94a3b8;
+        }
+
+        @media(max-width: 768px) {
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="hero">
+        <h1>Chuvas e Deslizamentos no Estado do Rio de Janeiro</h1>
+
+        <p>
+            Projeto analítico desenvolvido com Python, Pandas, Streamlit,
+            Matplotlib e Seaborn para investigar padrões climáticos,
+            sazonalidade e riscos de deslizamentos no RJ.
+        </p>
+
+        <div class="buttons">
+            <a class="btn" href="README.md" target="_blank">
+                README
+            </a>
+            <a class="btn" href="https://github.com/BrenerSI/Atividade-G2---Projeto-Final" target="_blank">
+                GitHub
+            </a>
+
+            <a class="btn" href="https://atividade-g2---projeto-final-cyfpqvcl4ezwmuv36ddcya.streamlit.app" target="_blank">
+                Dashboard Streamlit
+            </a>
+
+            <a class="btn" href="dados/simulacao_chuvas_deslizamentos_rj.csv" target="_blank">
+                Baixar Base de Dados
+            </a>
+        </div>
+    </div>
+</header>
+    <section>
+    <div class="section-title">
+        <h2>Perguntas Relevantes</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Volume de Chuva</h3>
+            <p>
+                Qual é o volume total de chuva registrado no período analisado?
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Municípios Mais Chuvosos</h3>
+            <p>
+                Quais municípios apresentam maior volume de precipitação?
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Deslizamentos</h3>
+            <p>
+                Quais municípios registram mais ocorrências de deslizamentos?
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Correlação</h3>
+            <p>
+                Existe relação entre o aumento das chuvas e o número de deslizamentos?
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Regiões Críticas</h3>
+            <p>
+                Quais regiões do Estado do Rio de Janeiro apresentam maior nível de risco?
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Sazonalidade</h3>
+            <p>
+                Há períodos do ano com maior concentração de chuvas e deslizamentos?
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Impacto Social</h3>
+            <p>
+                Qual o impacto social dos eventos analisados em termos de desalojados e afetados?
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Objetivos do Projeto</h2>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Análise Climática</h3>
+            <p>
+                Investigar padrões de chuva e períodos críticos no Estado do Rio de Janeiro.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Risco de Deslizamentos</h3>
+            <p>
+                Identificar municípios vulneráveis e regiões com maior risco ambiental.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Visualização de Dados</h3>
+            <p>
+                Criar dashboards interativos com filtros, gráficos e KPIs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Tomada de Decisão</h3>
+            <p>
+                Auxiliar análises preventivas e estratégias de monitoramento urbano.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>KPIs Analisados</h2>
+    </div>
+
+    <div class="stats">
+        <div class="stat-box">
+            <h3>Chuva</h3>
+            <p>Volume total e média mensal de precipitação</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>Deslizamentos</h3>
+            <p>Total de ocorrências registradas</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>Desalojados</h3>
+            <p>Análise de impactos sociais</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>Correlação</h3>
+            <p>Relação entre chuva intensa e deslizamentos</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Tecnologias Utilizadas</h2>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Python</h3>
+            <p>Linguagem principal do projeto.</p>
+        </div>
+
+        <div class="card">
+            <h3>Pandas</h3>
+            <p>Tratamento e análise dos dados.</p>
+        </div>
+
+        <div class="card">
+            <h3>Streamlit</h3>
+            <p>Construção do dashboard interativo.</p>
+        </div>
+
+        <div class="card">
+            <h3>Matplotlib & Seaborn</h3>
+            <p>Visualização gráfica e análises estatísticas.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Conclusão</h2>
+    </div>
+
+    <div class="about">
+        <p>
+            O projeto permitiu compreender padrões sazonais de chuva e suas relações
+            com deslizamentos de terra no Estado do Rio de Janeiro.
+            A análise evidencia a importância do monitoramento climático e da prevenção
+            em regiões vulneráveis.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>
+        Projeto desenvolvido pelos estudantes Brener Baiense e Victor Hugo Peres.
+    </p>
+</footer>
+
+</body>
+</html>
