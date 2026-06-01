@@ -59,10 +59,10 @@ projeto-chuvas-deslizamentos-rj/
 ├── index.html
 ├── dados/
 │   └── simulacao_chuvas_deslizamentos_rj.csv
+├── database/
+│   └── simulacao_chuvas_deslizamentos_rj.sqlite
 ├── notebooks/
 │   └── analise_chuvas_deslizamentos.ipynb
-├── database/
-└── imagens/
 ```
 
 ---
