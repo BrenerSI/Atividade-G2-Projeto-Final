@@ -51,7 +51,7 @@ O projeto busca responder às seguintes perguntas:
 ## 4. Estrutura do projeto
 
 ```text
-projeto-chuvas-deslizamentos-rj/
+Atividade-G2-Projeto-Final/
 │
 ├── app.py
 ├── requirements.txt
